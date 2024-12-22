@@ -1,0 +1,124 @@
+/* Body styling */
+body {
+  font-size: 16px; /* フォントサイズを大きく調整 */
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef); /* 白と薄い灰色のグラデーション */
+  color: #333; 
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botón para abrir */
+#open {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #d1d5db; /* 薄い灰色のボーダー */
+  border-radius: 8px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 16px auto 0;
+  background: linear-gradient(135deg, #f8f9fa, #d1d5db); /* 白とシルバー調のグラデーション */
+  color: #495057;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fondo modal */
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+/* Modal */
+#modal {
+  background: rgba(255, 255, 255, 0.95); /* 半透明の白 */
+  width: 60%; /* モーダルの幅を調整 */
+  max-width: 600px; /* 最大幅を設定 */
+  padding: 20px;
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border: 1px solid #ced4da; /* 薄いグレーのボーダー */
+  color: #495057;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#modal.hidden {
+  transform: translate(-50%, -200%);
+}
+
+#modal > p {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #6c757d; /* グレー文字 */
+}
+
+/* Contenedor del carrusel */
+#carousel {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* 高さを幅と同じにして正方形にします */
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Imagen dentro del carrusel */
+img.slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像がコンテナにフィットするように調整 */
+  transition: left 1s ease-in-out;
+}
+
+img.slide.active {
+  left: 0;
+}
+
+img.slide.previous {
+  left: -100%;
+}
+
+/* Botón de cerrar */
+#close {
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+  border: 1px solid #d1d5db; /* 灰色のボーダー */
+  background: #e9ecef; /* 灰色の背景 */
+  color: #495057;
+  padding: 8px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#close:hover {
+  background: #ced4da; /* 少し濃い灰色 */
+}
+
+/* Esconder elementos */
+.hidden {
+  display: none;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal con Carrusel</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <section id="modal" class="hidden">
+    <!-- Contenedor del carrusel -->
+    <div id="carousel">
+      <img src="christmas-bg.png" alt="Fondo de Navidad" class="slide active">
+      <img src="A_festive_Christmas_background_featuring_a_snowy_l.png" alt="Paisaje Nevado de Navidad" class="slide">
+      <img src="A_charming_Christmas_scene_with_a_glowing_fireplac.png" alt="Sala de Navidad con Chimenea" class="slide">
+    </div>
+
+    <!-- Mensaje -->
+    <p>
+      ¡Feliz Navidad! 🎄<br>
+      Que tengas momentos maravillosos. 🎅
+    </p>
+
+    <!-- Botón cerrar -->
+    <div id="close">
+      Cerrar
+    </div>
+  </section>
+
+  <!-- Botón ver detalles -->
+  <div id="open">
+    Ver detalles
+  </div>
+
+  <!-- Fondo del modal -->
+  <div id="mask" class="hidden"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
